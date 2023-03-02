@@ -5,23 +5,32 @@
 # @Description :
 # 从键盘输入四个整数，并输出其中最大的数。
 
+# a = int(input("请输入第一个整数："))
+# b = int(input("请输入第二个整数："))
+# c = int(input("请输入第三个整数："))
+# d = int(input("请输入第四个整数："))
+#
+# max_num = a  # 假设a是最大的数
+# if b > max_num:
+#     max_num = b
+# if c > max_num:
+#     max_num = c
+# if d > max_num:
+#     max_num = d
+#
+# print("最大的数是：", max_num)
 
-# if __name__ == '__main__':
-#     num1 = input("第一个数字")
-#     num2 = input("第二个数字")
-#     num3 = input("第三个数字")
-#     num4 = input("第四个数字")
-#     a = [num1, num2, num3, num4]
-#     print(max(a))
 
-print("请输入需要比较的三个值，用空格隔开:")
+print("请输入需要比较的四个值，用空格隔开:")
+
+
 def getMax(*a):
-
-    m=a[0]
+    m = a[0]
     for x in a:
-        if x>m:
-            m=x
+        if x > m:
+            m = x
     return m
-s,d,f=map(int,input().split())
-print("最大值:",max(s,d,f))
 
+
+s, d, f, e = map(int, input().split())
+print("最大值:", max(s, d, f, e))
