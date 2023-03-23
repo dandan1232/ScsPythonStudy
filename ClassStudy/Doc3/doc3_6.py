@@ -27,38 +27,38 @@ def is_prime(n):
 这个函数利用了 is_prime 函数来判断每个数是否为质数，并使用一个集合来存储所有找到的质数。'''
 
 
-def find_prime_numbers(lst):
+def find_prime_numbers(list_number):
     primes = set()
-    for num in lst:
+    for num in list_number:
         if is_prime(num):
             primes.add(num)
     return primes
 
 
-'''然后，我们定义了一个名为 find_sum_of_primes 的函数，用于找出列表中可以表示为另外两个质数之和的质数的数量。
-首先，我们使用 find_prime_numbers 函数来找出列表中的所有质数。
-然后，我们遍历其中的每对质数，并检查它们的和是否也是一个质数。
-如果是，我们就增加计数器的值，表示找到了一个可以表示为另外两个质数之和的质数。
-需要注意的是，我们只需要找到一个与该质数的和相等的质数即可，因此我们使用了一个 break 语句来提前结束内层循环。'''
+'''定义一个名为 find_sum_of_primes 的函数，用于找出列表中可以表示为另外两个质数之和的质数的数量。'''
 
 
-def find_sum_of_primes(lst):
-    primes = find_prime_numbers(lst)
+def find_sum_of_primes(list_number):
+    # 首先，我们使用find_prime_numbers函数来找出列表中的所有质数。
+    primes = find_prime_numbers(list_number)
     count = 0
+    # 我们遍历其中的每对质数，并检查它们的和是否也是一个质数。
     for prime1 in primes:
         for prime2 in primes:
             if prime1 != prime2 and prime1 + prime2 in primes:
+                # 如果是，就增加计数器的值，表示找到了一个可以表示为另外两个质数之和的质数。
                 count += 1
+                # 使用了一个break语句来提前结束内层循环
                 break
     return count
 
 
-'''最后，我们生成一个长度为100的随机整数列表，并分别调用 find_prime_numbers 和 find_sum_of_primes 函数来计算所需的结果。
+'''最后，生成一个长度为100的随机整数列表，并分别调用 find_prime_numbers 和 find_sum_of_primes 函数来计算所需的结果。
 程序会输出生成的列表、不同的质数数量和可以表示为另外两个质数之'''
 
-lst = [random.randint(1, 100) for _ in range(100)]
-print(f"生成的随机整数列表为：{lst}")
-primes = find_prime_numbers(lst)
+list_number = [random.randint(1, 100) for _ in range(100)]
+print(f"生成的随机整数列表为：{list_number}")
+primes = find_prime_numbers(list_number)
 print(f"该列表中不同的质数有 {len(primes)} 个")
-count = find_sum_of_primes(lst)
+count = find_sum_of_primes(list_number)
 print(f"该列表中有 {count} 个质数可以表示为该列表中另外两个质数的和")
