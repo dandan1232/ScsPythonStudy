@@ -14,6 +14,7 @@
 # …
 # Please input the number of numbers：（假设输入n=0，则退出程序）
 
+
 while True:
     try:
         n = int(input("Please input the number of numbers (input 'n=0' to exit): "))
