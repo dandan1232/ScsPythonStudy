@@ -8,9 +8,12 @@ a = int(input("请输入数字 a："))
 n = int(input("请输入数字 n："))
 
 total = 0
-for i in range(1, n + 1):
-    num = int(str(a) * i)
-    print("", num)
-    total += num
+term = 0
+for i in range(1, n+1):
+    term = term*10 + a   # 计算当前项的值
+    total += term        # 将当前项的值加到总和中
 
-print("S =", total)
+print("S =", end=" ")
+for i in range(1, n):
+    print("{}+".format(int(str(a)*i)), end="")  # 输出每一项的值
+print("{}={}".format(int(str(a)*n), total))    # 输出总和
