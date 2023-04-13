@@ -9,15 +9,20 @@
 # *   *   *   *   *
 # *   *   *   *
 # *   *   *
+n = int(input("请输入正六边形的边长："))
 
-n = int(input("请输入一个整数 n："))
+# 计算正六边形的中心点位置
+center = n - 1
 
-# 输出上半部分
-for i in range(n):
-    print('  ' * (n - i - 1), end='')  # 输出空格
-    print('*   ' * (i + 3))
+for i in range(2 * n - 1):
+    line = ""
+    if i <= center:
+        # 上半部分
+        line += " " * (center - i)
+        line += "* " * (n + i)
+    else:
+        # 下半部分
+        line += " " * (i - center-1)
+        line += "* " * (3 * n - i - 2)
+    print(line)
 
-# 输出下半部分
-for i in range(n - 2, -1, -1):
-    print('  ' * (n - i - 1), end='')  # 输出空格
-    print('*   ' * (i + 3))
