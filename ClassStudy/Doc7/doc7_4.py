@@ -9,6 +9,7 @@
 # 2        3
 # 3        7
 # 5        31
+from math import log2
 
 
 def is_prime(n):
@@ -34,10 +35,22 @@ def is_mersenne_prime(p):
         return -1
 
 
+# 从键盘中读取一个整数
+n = int(input("请输入一个整数："))
 
+# 判断这个整数是否为梅森素数
+if is_prime(n):
+    p = int(log2(n + 1))
+    if is_mersenne_prime(p) == p:
+        print(f"{n}是梅森素数，p={p}")
+    else:
+        print(f"{n}不是梅森素数(-1)")
+else:
+    print(f"{n} 不是素数")
 
 # 输出1000以内的所有梅森素数
 # print("{:>3s} {:>4s}".format("P", "2p-1"))
+print("1000以内的所有梅森素数如下:")
 for p in range(2, 32):
     if is_mersenne_prime(p) != -1:
         print("{:3d} {:4d}".format(p, 2 ** p - 1))
