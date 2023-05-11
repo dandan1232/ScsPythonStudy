@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2023/5/11 13:30
+# @Time    : 2023/5/11 13:38
 # @Author  : Lindand
 # @File    : Doc10_1.py
 # @Description :
@@ -15,5 +15,25 @@
 # Abbott
 # Cornell
 
+# 读取names.txt文件中的内容
+with open('date/names.txt', 'r') as f:
+    names = f.read().splitlines()
 
+# 让用户输入待插入的名字
+new_name = input('请输入待插入的名字：')
 
+# 如果这个名字已经存在于列表中，则不需要插入
+if new_name in names:
+    print('这个名字已经存在于文件中。')
+else:
+    # 找到新名字应该插入的位置
+    index = 0
+    while index < len(names) and new_name > names[index]:
+        index += 1
+    # 插入新名字
+    names.insert(index, new_name)
+    print('新名字已经成功插入到文件中。')
+
+    # 将更新后的列表写入到new_names.txt文件中
+    with open('date/new_names.txt', 'w') as f:
+        f.write('\n'.join(names))
