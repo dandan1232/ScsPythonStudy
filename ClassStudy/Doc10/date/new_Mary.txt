@@ -1,0 +1,31 @@
+/* 1 */ Mary had a little lamb,
+/* 2 */ 
+/* 3 */ Whose fleece was white as snow.
+/* 4 */ 
+/* 5 */ And everywhere that Mary went,
+/* 6 */ 
+/* 7 */ The lamb was sure to go.
+/* 8 */ 
+/* 9 */ He followed her to school one day,
+/* 10 */ 
+/* 11 */ Which was against the rule,
+/* 12 */ 
+/* 13 */ It made the children laugh and play,
+/* 14 */ 
+/* 15 */ To see a lamb at school.
+/* 16 */ 
+/* 17 */ And so the teacher turned it out,
+/* 18 */ 
+/* 19 */ But still it lingered near,
+/* 20 */ 
+/* 21 */ And waited patiently about,
+/* 22 */ 
+/* 23 */ Till Mary did appear.
+/* 24 */ 
+/* 25 */ "Why does the lamb love Mary so?"
+/* 26 */ 
+/* 27 */ The eager children cry.
+/* 28 */ 
+/* 29 */ "Why, Mary loves the lamb, you know."
+/* 30 */ 
+/* 31 */ The teacher did reply.
