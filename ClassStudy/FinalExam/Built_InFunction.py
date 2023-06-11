@@ -57,4 +57,135 @@ print(format(123456789, '0.2E'))
 print(format(1.23456749, 'f'))
 print(format(1.23456789, '0.2f'))
 print(format(1.23456789, '0.10f'))
-print(format(1.23456789e+18, 'F'))
+print(format(1.23456789e-2, 'F'))
+
+# bytes()把字符转化成bytes类型
+bs = bytes("像风一样", encoding="utf-8")
+print(bs)
+
+# bytearray()返回一个新字节数组
+ret = bytearray("像风一样", encoding="utf-8")
+print(ret)
+print(ret[0])
+ret[0] = 65  # 65是A
+print(ret)
+
+print(ord('a'))
+print(chr(65))
+print(ascii(98))  # 98
+for i in range(20):
+    print(chr(i), end=" ")
+
+a = "薛之谦"
+str = "像\n风一%s样，你靠近云\t就下%s降" % (a, 98)
+print(str)
+print(repr(str))
+
+# 2.数据集合
+dict = (2, 3, 6, "好的")
+print(dict)
+set = {"888", 23, "薛之谦"}
+print(type(set))
+
+list = [2, 43, 67, 85, 12, 75]
+print(type(list))
+print(sorted(list))
+a = sorted(list, reverse=True)
+print(a)
+
+list = ["cc", "CC", "A", "m", "H"]
+
+
+def f(s):
+    return len(s)
+
+
+l1 = sorted(list, key=f, reverse=True)
+print(l1)
+
+list = ["念安", "石二狗", "阿正", "aaa", 111, 0]
+for index, el in enumerate(list, 1):
+    print(index, end=" ")
+    print(el, end=" ")
+
+print("____________________")
+print(all(list))
+
+list1 = ["念安", "石二狗", "阿正", "aaa", 111, 0]
+list2 = ["cc", "CC", "A", "m", "H"]
+list3 = [2, 43, 67, 85, 12, 75]
+for i in zip(list1, list2, list3):
+    print(i,end="------")
+
+#map返回True和False
+#filter返回值
+def func(i):
+    return i % 2 == 1
+
+
+lst = [2, 43, 67, 85, 12, 75]
+l1 = map(func, lst)
+print(type(l1))
+print(l1)
+print(list(l1))
+
+
+def func():
+    a = 10
+    print(locals())
+    print(globals())
+    print("今天不太开心")
+
+
+func()
+
+for i in range(15, -1, -5):
+    print(i)
+
+lst = [1, 2, 6, 4, 2, 7, 8]
+it = iter(lst)
+print(it.__next__())
+print(next(it))
+print(next(it))
+print(next(it))
+
+
+s1=input("a+b:")
+print(eval(s1))
+s2="for i in range(5):print(i)"
+print(exec(s2))
+
+#  动态执行代码
+exec("""
+def func():
+    print("aaa")
+func()
+""")
+
+
+code1 = "for i in range(5): print(i)"
+com1 = compile(code1, "", mode="exec")
+exec(com1)
+
+code2 = "3+4+5+6"
+com2 = compile(code2, "", mode="eval")
+print(eval(com2))
+
+code3 = "name=input(':')"
+com3 = compile(code3, "", mode="single")
+exec(com3)
+print(name)
+
+
+print("aa", "cc", "ee", sep="+", end="@")
+
+s = "今天不开心"
+print(hash(s))
+tup = (2, 4, 5, 7, 1)
+print(hash(tup))
+print(id(s))
+
+f = open("D:\Study\ScsPythonStudy\ClassStudy\Doc10\date\TelephoneBook.txt", mode="r", encoding="utf-8")
+f.read()
+
+print(dir(tuple))
