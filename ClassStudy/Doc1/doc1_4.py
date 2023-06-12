@@ -12,5 +12,6 @@ h = input("输入高度h:")
 r = input("输入半径r:")
 a = math.pi * int(r) * int(r) * int(h)
 b = 20000 / a
+print(b)
 m = math.ceil(b)
 print("桶数:%d" % m)
