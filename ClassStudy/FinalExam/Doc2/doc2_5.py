@@ -7,8 +7,8 @@
 # 例：给定"What a wonderful day!"，输出："day! wonderful a What"
 
 
-s=input("一串：")
-s1=s.split(" ")
+s = input("一串：")
+s1 = s.split(" ")
 s1.reverse()
-str1=" ".join(s1)
+str1 = " ".join(s1)
 print(str1)
