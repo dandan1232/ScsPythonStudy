@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2023/3/16 13:46
+# @Time    : 2023/6/12 23:01
 # @Author  : Lindand
 # @File    : doc2_3.py
 # @Description :
@@ -7,14 +7,8 @@
 # 当前时间是：几时：几分：几秒
 # 输出示例：当前时间是： 14：26：32
 
+from datetime import datetime
 
-import datetime
-
-# 获取当前北京时间
-now = datetime.datetime.now()
-
-# 格式化输出时间
-time_str = now.strftime("当前时间是： %H:%M:%S")
-
-# 打印输出结果
-print(time_str)
+time = datetime.now()
+current = time.strftime("%H:%M:%S")
+print(current)
