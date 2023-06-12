@@ -4,6 +4,7 @@
 # @File    : doc1_5.py
 # @Description :编写程序让用户输入平面上两个点的坐标，计算该两点间的距离。
 
+'''导包，pow用法，设为int值'''
 import math
 
 num1 = input("1(,):")
