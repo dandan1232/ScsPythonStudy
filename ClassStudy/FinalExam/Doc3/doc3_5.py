@@ -10,3 +10,4 @@
 num=int(input(":"))
 
 
+
