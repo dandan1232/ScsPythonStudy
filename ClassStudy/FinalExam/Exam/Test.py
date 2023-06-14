@@ -20,17 +20,8 @@
 # print(2 ** 3 ** 2)  # 2**(3**2)=2**9=512
 # print(pow(6561, 1 / 4))
 
-import math
 
-n = 0
-for m in range(101, 201, 2):
-    # k=int(math.sqrt(m))
-    # print("+++",k)
-    for i in range(2, m):
-        if m % i == 0: break
-    if n % 10 == 0: print()
-    print('%d' % m, end=' ')
-    n += 1
+
 
 print('%d%d' % (3 / 2, 3 % 2))
 
@@ -42,5 +33,3 @@ print(f(12, 34))
 
 counter = 0;
 num = 0
-
-
