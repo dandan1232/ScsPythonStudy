@@ -9,3 +9,21 @@
 
 '''不会'''
 
+employee_info = {}
+employee_data = input("输入，姓名编号，按照 ：")
+while employee_data != "":
+    name, number = employee_data.split()
+    employee_info[name] = number
+    print(employee_info[name])
+    employee_data = input("按照空格结束:")
+
+print("name顺序")
+for name in sorted(employee_info.keys()):
+    print(name, employee_info[name])
+
+number_name_dict = {v: k for k, v in employee_info.items()}
+print(number_name_dict)
+
+print("number顺序排序")
+for number in sorted(number_name_dict.keys()):
+    print(number, number_name_dict[number])
