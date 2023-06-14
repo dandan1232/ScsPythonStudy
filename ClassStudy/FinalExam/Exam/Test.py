@@ -32,10 +32,15 @@ for m in range(101, 201, 2):
     print('%d' % m, end=' ')
     n += 1
 
-n = int(input("请输入图形的行数: "))
-for i in range(0, n):
-    # for j in range(0, 10 - 1):
-    #     print(" ", end=' ')
-    for j in range(0, 2 * i + 1):
-        print("*", end=' ')
-    print("\n")
+print('%d%d' % (3 / 2, 3 % 2))
+
+print(tuple([1, 2, 3]), list([1, 2, 3]))
+
+f = lambda x, y: x * y;
+f(12, 34)
+print(f(12, 34))
+
+counter = 0;
+num = 0
+
+
