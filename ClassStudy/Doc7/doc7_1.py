@@ -22,3 +22,11 @@ def factor_sum(n):
 if __name__ == '__main__':
     n = int(input("请输入一个整数："))
     print("该整数的所有因子之和为：", factor_sum(n))
+
+
+n = int(input("请输入一个整数："))
+factors = []
+for i in range(1, n):
+    if n % i == 0:
+        factors.append(i)
+print( sum(factors))
