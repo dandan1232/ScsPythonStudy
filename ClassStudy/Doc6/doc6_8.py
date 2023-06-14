@@ -17,3 +17,4 @@ for i in range(0, n // 5 + 1):
             print("{}元: {}个1元 + {}个2元 + {}个5元".format(n, k, j, i))
 
 print("共有{}种不同的组合方式。".format(count))
+print("%d"%count)

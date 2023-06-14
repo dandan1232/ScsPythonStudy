@@ -13,7 +13,7 @@ n = int(input("请输入一个整数n："))
 # 输出等腰三角形
 for i in range(1, n + 1):
     # 打印每一行的空格
-    for j in range(1, n - i + 3):
+    for j in range(1, n - i + 1):
         print("_", end="")
     # 打印每一行的星号
     for k in range(1, 2 * i):
